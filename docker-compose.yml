@@ -1,0 +1,38 @@
+services:
+  bob:
+    container_name: ipsec_bob
+    build:
+      context: './BOB/'
+    image: debian:latest
+    privileged: true
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./BOB/ipsec.conf:/etc/ipsec.conf
+      - /etc/ipsec.d
+    networks:
+      custom_network:
+        ipv4_address: 10.0.0.100
+
+  alice:
+    container_name: ipsec_alice
+    build:
+      context: './ALICE/'
+    image: debian:latest
+    privileged: true
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./ALICE/ipsec.conf:/etc/ipsec.conf
+      - /etc/ipsec.d
+    networks:
+      custom_network:
+        ipv4_address: 10.0.0.200
+
+networks:
+  custom_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.0/24
