@@ -32,8 +32,8 @@ Veuillez consulter <a href="https://docs.docker.com/">la documentation Docker</a
 Cloner le Dépôt :
 
 ```
-git clone https://github.com/votre-utilisateur/votre-repo.git
-cd votre-repo
+git clone https://github.com/quentinvvn/StrongSwan_IPSec_PSK.git
+cd StrongSwan_IPSec_PSK
 ```
 
 Construire et Démarrer les Conteneurs :
