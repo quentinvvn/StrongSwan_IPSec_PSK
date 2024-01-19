@@ -57,7 +57,7 @@ Vérifier l'État du Tunnel VPN :
 * StrongSwan :
   * Les configurations IPsec spécifiques sont définies dans les fichiers ipsec.conf dans les dossiers BOB et ALICE.
 
-  * Les clés pré-partagées sont spécifiées dans les fichiers ipsec.secrets.
+  * Les clés pré-partagées sont spécifiées dans les fichiers ipsec.secrets et sont générées aléatoirements avec openssl.
 
 ## Sécurité
 
